@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>
+tip calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1>Tip Calculator</h1>
+<div>
+<label>Bill amount</label>
+<input type="text" name="" id="bill_amount">
+<br>
+<label>tip perc</label>
+<input type="text" name="" id="tip_perc">
+<br>
+<label>tip amount</label>
+<input type="text" name="" id="tip_amount" disabled>
+<br>
+<label>total billed</label>
+<input type="text" name="" id="total_billed" disabled>
+<br>
+<button onclick="calc()">Calculate</button>
+</div>
+</main>
+<script>
+function calc(){
+var amount=document.getElementById('bill_amount').value;
+var perc=document.getElementById('tip_perc').value;
+var tip=amount*(perc/100);
+alert(tip);
+
+var total=tip+Number(amount);
+alert(total);
+}
+</script>
+</body>
+</html>
